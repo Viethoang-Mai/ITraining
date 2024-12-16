@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML-CSS</title>
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- External CSS  -->
+        <style>
+            /* Internal CSS */
+            h1 {
+                color: red;
+            }
+            #title-id {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1
+                class="title"
+                id="title-id"
+                title="This is a title"
+                style="color: aliceblue"
+            >
+                HTML-CSS
+            </h1>
+            <!-- This is a comment -->
+            <!-- title, style la một attribute của thẻ h1 -->
+        </header>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="model-1">
+                        <label
+                            style="
+                                padding: 5px 10px;
+                                cursor: pointer;
+                                background: #d75757;
+                                color: aliceblue;
+                            "
+                            ><input
+                                hidden
+                                id="overlay"
+                                type="checkbox"
+                                class="active-overlay"
+                            />
+                            <label for="overlay" class="overlay"></label>
+
+                            Click here</label
+                        >
+                        <div class="box"></div>
+                        <button class="btn btn-box">Hover me</button>
+                    </div>
+                    <div class="model-2">
+                        <ul class="list-item">
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                            <li class="item"></li>
+                        </ul>
+                        <div class="scroll-x">
+                            <ul class="list-img">
+                                <li class="item-img">
+                                    <img
+                                        src="https://picsum.photos/300/400"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="item-img">
+                                    <img
+                                        src="https://picsum.photos/300/400"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="item-img">
+                                    <img
+                                        src="https://picsum.photos/300/400"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="item-img">
+                                    <img
+                                        src="https://picsum.photos/300/400"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                                <li class="item-img">
+                                    <img
+                                        src="https://picsum.photos/300/400"
+                                        alt=""
+                                        loading="lazy"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+    </body>
+</html>
