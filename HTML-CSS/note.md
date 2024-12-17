@@ -1,4 +1,4 @@
-## khái niệm
+## Khái niệm
 
 -   HTML: HyperText Markup Language, HTML được sử dụng để tạo và cấu trúc các thành phần trong trang web hoặc ứng dụng, phân chia các đoạn văn, heading, titles, blockquotes… và HTML không phải là ngôn ngữ lập trình.
 
