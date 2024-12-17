@@ -28,7 +28,7 @@ header {
         transition: all 0.2s ease-in-out;
         position: fixed;
         inset: 0;
-        z-index: -1;
+        z-index: -2;
         opacity: 0;
         background: #0000003a;
     }
@@ -164,3 +164,129 @@ header {
         order: 3;
     }
 }
+/* ------------------------ HERO------------------- */
+.hero {
+}
+.hero {
+    .hero-swiper {
+        img {
+            height: 100%;
+        }
+    }
+    & .hero-download_app {
+        padding: 6px;
+        background: linear-gradient(90deg, #fff, hsla(0, 0%, 100%, 0)),
+            linear-gradient(
+                179.27deg,
+                #ffedd6 0.83%,
+                #ffc3e3 46.78%,
+                #fff 99.57%
+            ),
+            linear-gradient(0deg, #fff, #fff);
+    }
+    .app-title {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        img {
+            height: 42px;
+            width: 42px;
+        }
+        span {
+            font-size: 1.4rem;
+            color: #6c1d00;
+        }
+    }
+    .hero-download_content {
+        display: flex;
+        color: #fff;
+        margin-top: 6px;
+        padding: 7px;
+
+        font-weight: 500;
+        font-size: 1.2rem;
+        flex-direction: column;
+        background: url(https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01tceZus1IewufOY1tZ_!!6000000000919-2-tps-364-316.png)
+            no-repeat;
+        background-size: 100% auto;
+        .enjoy-tip {
+            margin: 10px 0 20px;
+        }
+    }
+    .free-voucher_info {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        font-size: 1.4rem;
+        gap: 10px;
+        > * {
+            display: flex;
+            width: 60%;
+            column-gap: 10px;
+        }
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+    .module-qr {
+        margin-top: 7px;
+        color: black;
+        > span {
+            color: #2e3346;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .qr-action {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            > img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        .qr-action_btn {
+            flex-grow: 1;
+            font-size: 1.1rem;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            a {
+                display: flex;
+                border: 1px solid #000;
+                border-radius: 5px;
+                padding: 2px 3px;
+                column-gap: 5px;
+                font-size: 1.1rem;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 2rem;
+                }
+                &:hover {
+                    border: 1px solid #f19c9c;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767.98px) {
+    .hero {
+        .hero-download_app {
+            display: flex;
+            padding: 6px 10px;
+            column-gap: 7px;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+/*  */
