@@ -20,9 +20,9 @@ g-5 => 3 * spacer
 
 */
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     outline: 0;
     list-style: none;
     text-decoration: none;
@@ -86,7 +86,7 @@ g-5 => 3 * spacer
 .row.g-3,
 .row.g-4,
 .row.g-5 {
-    margin: 0 calc(-1 * var(--column-space) / 2);
+    margin: 0;
 }
 
 .row.g-1 {

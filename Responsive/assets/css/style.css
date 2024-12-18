@@ -7,6 +7,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /*------------------------ HEADER------------------- */
 header {
     position: sticky;
@@ -289,6 +290,15 @@ header {
         }
     }
 }
+@media screen and (max-width: 767.98px) {
+    .hero {
+        .hero-download_app {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
 /* ------------------------ MOD-CARD------------------- */
 .mod-card {
     .item-card {
@@ -336,5 +346,168 @@ header {
     .mod-card {
     }
 }
+/* ------------------------ PRODUCT--------------------- */
+/* flash-sale */
+.fs-title {
+    margin: 15px 0 10px;
+}
+.header-fs {
+    background: #fff;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #f57224;
 
-/*  */
+    min-height: 60px;
+    flex-wrap: wrap;
+    gap: 15px;
+    .header-fs_left {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        column-gap: 65px;
+    }
+    .header-fs_timeleft {
+        color: #000;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        .time {
+            display: flex;
+            column-gap: 12px;
+            font-weight: 600;
+        }
+        .time-item {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 35px;
+            background: #d3232a;
+        }
+        .time-item.middle-item {
+            position: relative;
+            &&::after,
+            &::before {
+                position: absolute;
+                content: ":";
+                color: #000;
+                display: block;
+                top: 50%;
+                translate: 0 -50%;
+            }
+            &::after {
+                left: 110%;
+            }
+            &::before {
+                right: 110%;
+            }
+        }
+    }
+    .header-fs_right {
+        padding: 0 10px;
+        border: 2px solid #f36d00;
+        height: 35px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.fs-listcard {
+    background: #fff;
+    font-size: 1.4rem;
+    padding: 10px 0;
+}
+
+/* lazmall */
+.lazmall {
+    margin-top: 20px;
+    padding: 10px 0;
+}
+.lm-header {
+    > a {
+        display: flex;
+        align-items: center;
+        column-gap: 7px;
+        font-size: 1.4rem;
+        color: #1a9cb7;
+    }
+}
+.lm-list_card {
+    display: flex;
+    column-gap: 10px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        width: 5px;
+        height: 8px;
+        background-color: #aaa;
+        border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 999px;
+        background-color: #322727;
+    }
+    .lm-item_card {
+        flex-shrink: 0;
+        background: #fff;
+
+        width: 188px;
+        height: 270px;
+        > .lm-item_card-link {
+            display: block;
+            height: 100%;
+            &:hover {
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+    .img-product {
+        height: 188px;
+    }
+    .img-card {
+        position: relative;
+    }
+    .img-info {
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 50%;
+        translate: -50% 50%;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        width: 188px;
+    }
+    .img-brand {
+        background: white;
+        margin: 0 auto;
+        padding: 4px;
+        width: 52px;
+        height: 52px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 4px 0px;
+    }
+    .title {
+        color: #212121;
+        font-size: 1.4rem;
+        line-height: 18px;
+        margin: 8px 8px 4px;
+    }
+    .desc {
+        color: #9e9e9e;
+        font-size: 1.2rem;
+        line-height: 14px;
+        margin: 0 8px;
+    }
+}
