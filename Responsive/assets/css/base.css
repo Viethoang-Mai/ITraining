@@ -10,15 +10,12 @@
         font-size: 2.2rem;
     }
 }
-.product-list .item-card {
-    > a {
+.product-list {
+    a.link-item {
         display: block;
         &:hover {
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
         }
-    }
-    .content-card {
-        padding: 5px;
     }
     p.desc {
         -webkit-box-orient: vertical;
@@ -26,6 +23,17 @@
         display: -webkit-box;
         overflow: hidden;
     }
+    .price {
+        font-size: 1.8rem;
+        color: #f57224;
+        margin: 5px 0;
+    }
+}
+.product-list .item-card {
+    .content-card {
+        padding: 5px;
+    }
+
     p.price {
         font-size: 1.8rem;
         color: #f57224;
@@ -37,5 +45,45 @@
     .oldP {
         text-decoration: line-through;
         color: #ccc;
+    }
+}
+.product-list .item-card_rated {
+    margin-top: 5px;
+    .link-item {
+        img {
+            height: 189px;
+            max-height: 189px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .desc-gr {
+        img {
+            float: left;
+            width: 56px;
+            height: 16px;
+        }
+    }
+    .content {
+        padding: 4px 8px 12px;
+        background: #fff;
+    }
+    .percent-off {
+        color: #212121;
+        font-size: 1.2rem;
+        margin-left: 4px;
+        opacity: 0.8;
+    }
+    .rating {
+        display: flex;
+        align-items: center;
+        color: #9e9e9e;
+    }
+    .stars {
+        color: #faca51;
+        font-size: 1.1rem;
+    }
+    p.desc {
+        font-size: 1.4rem;
     }
 }
