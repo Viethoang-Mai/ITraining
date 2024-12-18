@@ -291,9 +291,6 @@ header {
 }
 /* ------------------------ MOD-CARD------------------- */
 .mod-card {
-    .list-card {
-        /* display: flex; */
-    }
     .item-card {
         flex-shrink: 1;
         > a {
@@ -333,6 +330,10 @@ header {
                 color: #6294ff;
             }
         }
+    }
+}
+@media screen and (max-width: 991.98px) {
+    .mod-card {
     }
 }
 
