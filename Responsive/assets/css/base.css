@@ -8,6 +8,7 @@
     }
     .product-header_item-title {
         font-size: 2.2rem;
+        margin-bottom: 5px;
     }
 }
 .product-list {
