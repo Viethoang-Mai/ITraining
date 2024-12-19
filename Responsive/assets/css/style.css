@@ -13,6 +13,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    > .container {
+        background: var(--color-primary-bg);
+    }
 }
 .header-nav {
     display: flex;
@@ -545,6 +548,7 @@ header {
     padding: 24px 0;
 }
 /* ------------------------ FOOTER------------------- */
+/* Footer-first */
 .footer-first {
     padding: 25px 0 20px;
     color: #0f136d;
@@ -582,6 +586,7 @@ header {
         }
     }
 }
+/* Footer-second */
 .footer-second {
     padding: 20px 0 25px;
     background: #fff;
@@ -684,6 +689,26 @@ header {
         .right-column {
             margin-left: auto;
         }
+    }
+}
+/* Footer-fourth */
+.footer-fourth {
+    padding: 40px 0 20px;
+    background: white;
+    .ff-left_title {
+        color: #2a2a2a;
+        margin: 5px 10px 5px 0;
+    }
+
+    .ff-copyright {
+        color: #606060;
+        font-size: 1.4rem;
+        text-align: right;
+    }
+    .area-asian,
+    .social {
+        display: flex;
+        column-gap: 3px;
     }
 }
 
