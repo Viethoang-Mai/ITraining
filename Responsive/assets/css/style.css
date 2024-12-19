@@ -582,6 +582,56 @@ header {
         }
     }
 }
+.footer-second {
+    padding: 20px 0 25px;
+    background: #fff;
+    .footer-second_header {
+        color: #183544;
+        margin-bottom: 15px;
+    }
+    .footer-second_gr-img {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .payment-method {
+        img {
+            max-width: 53px;
+            flex-grow: 1;
+        }
+        .footer-second_gr-img {
+            gap: 10px 29px;
+        }
+    }
+    .delivery-service {
+        margin-left: 40px;
+        img {
+            width: 96px;
+            height: 70px;
+        }
+    }
+    .verify {
+        .verify-left {
+            margin-right: 10px;
+            img {
+                max-width: 92px;
+                margin-bottom: 5px;
+            }
+        }
+        .verify-right {
+            img {
+                max-width: 107px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .footer-second {
+        .delivery-service {
+            margin: 20px 0;
+        }
+    }
+}
 
 /* -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
