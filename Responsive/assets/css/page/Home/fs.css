@@ -1,0 +1,78 @@
+/* flash-sale */
+.list-fs {
+    scroll-margin-top: 200px;
+}
+.fs-title {
+    margin: 15px 0 10px;
+}
+.header-fs {
+    background: #fff;
+    padding: 5px 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #f57224;
+    height: auto !important;
+    min-height: 60px;
+    flex-wrap: wrap;
+    gap: 15px;
+    .header-fs_left {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        column-gap: 65px;
+    }
+    .header-fs_timeleft {
+        color: #000;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        .time {
+            display: flex;
+            column-gap: 12px;
+            font-weight: 600;
+        }
+        .time-item {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 35px;
+            background: #d3232a;
+        }
+        .time-item.middle-item {
+            position: relative;
+            &&::after,
+            &::before {
+                position: absolute;
+                content: ":";
+                color: #000;
+                display: block;
+                top: 50%;
+                translate: 0 -50%;
+            }
+            &::after {
+                left: 110%;
+            }
+            &::before {
+                right: 110%;
+            }
+        }
+    }
+    .header-fs_right {
+        padding: 0 10px;
+        border: 2px solid #f36d00;
+        height: 35px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.fs-listcard {
+    background: #fff;
+    font-size: 1.4rem;
+    padding: 10px 0;
+}

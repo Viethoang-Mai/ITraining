@@ -1,0 +1,21 @@
+/* Just for you */
+.jfu {
+    scroll-margin-top: 200px;
+}
+.jfu-loadmore {
+    display: block;
+
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin: 24px auto 4px;
+    color: #1a9cb8;
+    border: 2px solid #1a9cb8;
+    width: 30%;
+}
+@media screen and (max-width: 576px) {
+    .jfu-loadmore {
+        font-size: 1.1rem;
+    }
+}
