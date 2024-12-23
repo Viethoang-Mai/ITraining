@@ -63,7 +63,7 @@ b thay đổi --> a thay đổi
 // console.log(users);
 
 //12. splice(index, number, ...args);
-// var newArr = users.splice(1, 2, "Hải", "Yến", "Đức Anh");
+// var newArr = users.splice(1, 2);
 // console.log(users);
 // console.log(newArr);
 
@@ -83,12 +83,12 @@ console.log(a);
 
 var numbers = [1, 100, 5, 10, 2];
 numbers.sort(function (a, b) {
-  //a: sau
-  //b: trước
-  //   if (b > a) {
-  //     return -1;
-  //   }
-  return a - b;
+    //a: sau
+    //b: trước
+    //   if (b > a) {
+    //     return -1;
+    //   }
+    return a - b;
 });
 console.log(numbers);
 
@@ -102,22 +102,22 @@ console.log(numbers);
 // document.body.innerHTML = `<h2>${users.join("</h2><h2>")}</h2>`;
 
 var customers = [
-  "Tạ Hoàng An",
-  "Nguyễn Minh Nhật Dương",
-  "Đặng Ngọc Sơn",
-  "Phan Văn Hải",
-  "Phạm Xuân Yến",
+    "Tạ Hoàng An",
+    "Nguyễn Minh Nhật Dương",
+    "Đặng Ngọc Sơn",
+    "Phan Văn Hải",
+    "Phạm Xuân Yến",
 ];
 
 //Sắp xếp danh sách khách hàng theo thứ tự tăng dần (theo tên)
 var getFirstName = function (fullname) {
-  //   console.log(fullname.split(" ").slice(-1).join());
-  return fullname.split(" ").slice(-1).join();
+    //   console.log(fullname.split(" ").slice(-1).join());
+    return fullname.split(" ").slice(-1).join();
 };
 
 customers.sort(function (a, b) {
-  if (getFirstName(b) > getFirstName(a)) {
-    return -1;
-  }
+    if (getFirstName(b) > getFirstName(a)) {
+        return -1;
+    }
 });
 console.log(customers);

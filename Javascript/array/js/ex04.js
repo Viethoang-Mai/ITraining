@@ -2,21 +2,24 @@
 Tìm kiếm phần tử theo từ khóa
 */
 var users = [
-  "Tạ Hoàng An",
-  "Lưu Anh Quân",
-  "Nguyễn Văn Hoàng",
-  "Nguyễn Văn Dũng",
-  "Mai Thị Hoa",
+    "Tạ Hoàng An",
+    "Lưu Anh Quân",
+    "Nguyễn Văn Hoàng",
+    "Nguyễn Văn Dũng",
+    "Mai Thị Hoa",
 ];
 
 var keyword = "an";
 
 //Tìm các users chứa từ khóa
 var result = users.findLast(function (user) {
-  //Từng user là chuỗi --> Bài toán xử lý chuỗi
-  var check = user.toLowerCase().includes(keyword.toLowerCase());
-  return check;
+    //Từng user là chuỗi --> Bài toán xử lý chuỗi
+    var check = user.toLowerCase().includes(keyword.toLowerCase());
+    console.log(check);
+
+    return check;
 });
+
 console.log(result);
 
 //Hàm find()
@@ -48,10 +51,10 @@ Khác indexOf --> Tự viết biểu thức logic trong hàm callback
 // console.log(index);
 
 var users = [
-  ["User 1", "user1@gmail.com", 30],
-  ["User 2", "user2@gmail.com", 31],
-  ["User 3", "user3@gmail.com", 28],
-  ["User 4", "user2@gmail.com", 31],
+    ["User 1", "user1@gmail.com", 30],
+    ["User 2", "user2@gmail.com", 31],
+    ["User 3", "user3@gmail.com", 28],
+    ["User 4", "user2@gmail.com", 31],
 ];
 // console.log(users);
 
@@ -75,10 +78,10 @@ Dựa vào index --> Cập nhật lại tuổi
 // console.log(users);
 
 var users = [
-  ["User 1", "user1@gmail.com", 30],
-  ["User 2", "user2@gmail.com", 31],
-  ["User 3", "user3@gmail.com", 28],
-  ["User 4", "user2@gmail.com", 31],
+    ["User 1", "user1@gmail.com", 30],
+    ["User 2", "user2@gmail.com", 31],
+    ["User 3", "user3@gmail.com", 28],
+    ["User 4", "user2@gmail.com", 31],
 ];
 
 //Yêu cầu: Loại bỏ phần tử có email bị trùng
@@ -92,18 +95,18 @@ console.log(users);
 var newArr = [];
 var emails = [];
 users.forEach(function (user) {
-  //user --> Từng phần tử của mảng user
-  //Tìm email của từng user, so sánh xem có nằm trong mảng newArr hay không?
-  //   var result = newArr.find(function (item) {
-  //     return item[1] === user[1];
-  //   });
-  //   if (!result) {
-  //     newArr.push(user);
-  //   }
-  if (!emails.includes(user[1])) {
-    newArr.push(user);
-    emails.push(user[1]);
-  }
+    //user --> Từng phần tử của mảng user
+    //Tìm email của từng user, so sánh xem có nằm trong mảng newArr hay không?
+    //   var result = newArr.find(function (item) {
+    //     return item[1] === user[1];
+    //   });
+    //   if (!result) {
+    //     newArr.push(user);
+    //   }
+    if (!emails.includes(user[1])) {
+        newArr.push(user);
+        emails.push(user[1]);
+    }
 });
 // console.log(newArr);
 

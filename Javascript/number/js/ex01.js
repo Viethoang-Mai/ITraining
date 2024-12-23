@@ -21,7 +21,7 @@ console.log(typeof age);
 // console.log(total);
 
 //Kiểm tra 1 số NaN
-// var a = "F8";
+// var a = "F9";
 // if (isNaN(a) || Number.isNaN(a)) {
 //   console.log("Số NaN");
 // } else {

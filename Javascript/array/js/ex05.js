@@ -28,12 +28,10 @@ Giá trị của hàm reduce sẽ là return lần cuối cùng
 */
 var numbers = [5, 10, 15, 20, 25, 30];
 // var result = numbers.reduce(function (prevValue, current) {
-//   console.log(prevValue, current);
-//   return current;
-// }, "F8");
+//     console.log(prevValue, current);
+//     return current;
+// }, "Mai");
 // console.log(result);
-
-//total = total + i
 
 // var result = numbers.reduce(function (total, number) {
 //   console.log(total, number);
@@ -44,7 +42,7 @@ var numbers = [5, 10, 15, 20, 25, 30];
 //Bài 1: Tìm giá trị lớn nhất
 var numbers = [5, 2, 9, 1, 8];
 var result = numbers.reduce(function (max, current) {
-  return max < current ? current : max;
+    return max < current ? current : max;
 });
 console.log(result);
 
@@ -57,23 +55,23 @@ var students = ["An", "Tâm", "Tùng", "Quý", "Hải"];
 var studentsActive = ["An", "Quý"];
 
 //Tìm học viên nghỉ học (Reduce)
-var studentsInactive = students.reduce(function (prev, current) {
-  if (!studentsActive.includes(current)) {
-    prev.push(current);
-  }
-  return prev;
-}, []);
-console.log(studentsInactive);
+// const arr = students.reduce((pre, cur) => {
+//     if (!studentsActive.includes(cur)) {
+//         pre.push(cur);
+//     }
+//     return pre;
+// }, []);
+// console.log(arr);
 
 //Bài 3:
 var students = ["An", "Tâm", "Tùng", "Quý", "Hải", "Tùng"];
 //Lọc trùng
 
 var result = students.reduce(function (prev, current) {
-  if (!prev.includes(current)) {
-    prev.push(current);
-  }
-  return prev;
+    if (!prev.includes(current)) {
+        prev.push(current);
+    }
+    return prev;
 }, []);
 console.log(result);
 
@@ -82,28 +80,13 @@ var numbers = [0, 1, [2, 3], [4, 5, [6, 7, [4, 5, [7, 8]]]]];
 
 // ==> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 console.log(numbers);
-function flatArr(arr) {
-  var result = arr.reduce(function (prev, current) {
-    if (Array.isArray(current)) {
-      return prev.concat(flatArr(current));
-    }
-    return prev.concat(current);
-  }, []);
-  return result;
-}
+const flatArr = (arr) => {
+    return arr.reduce((prev, curr) => {
+        if (Array.isArray(curr)) {
+            return prev.concat(flatArr(curr));
+        }
+        return prev.concat(curr);
+    }, []);
+};
 
 console.log(flatArr(numbers));
-
-// var numbers = [0, 1, [2, 3], [4, 5, [6, 7, [4, 5, [7, 8]]]]];
-
-// var flatArray = numbers.reduce((prev, curr) => {
-//   if (Array.isArray(curr)) {
-//     const flatArrayChild = curr.reduce((prevChild, currChild) => {
-//       return prevChild.concat(currChild);
-//     }, []);
-//     return prev.concat(...flatArrayChild);
-//   } else {
-//     return prev.concat(curr);
-//   }
-// }, []);
-// console.log(flatArray);
