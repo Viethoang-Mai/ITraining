@@ -26,7 +26,7 @@
 // //Object.assign(target, source1, source2,...)
 // //-Trả về object mới sau khi nối
 // //-Thay đổi object target
-// var a = { course: "Fullstack", teacher: "Hoàng An" };
+// var a = { course: "Javascript ", teacher: "Hoàng Mai" };
 // var b = { a: "1", b: "2" };
 // // var obj = Object.assign(user, a, b);
 // // var tmp = Object.assign({}, user); //Copy của user
@@ -68,29 +68,3 @@
 // var query = Object.fromEntries(entries);
 // console.log(entries);
 // console.log(query);
-
-// Lớn hơn 1
-// Số nguyên
-// Chỉ chia hết cho 1 & chính nó
-
-// 1
-// 2
-// 3
-// 6 - Trung tam
-// 12
-// 18
-// 36
-
-function timSoNguyenTo(x) {
-  if (x <= 1 || x % 1 !== 0) {
-    return false;
-  }
-
-  for (var i = 2; i < x; i++) {
-    console.log(i);
-    // if (x % i === 0) {
-    //   return false;
-    // }
-  }
-  return true;
-}

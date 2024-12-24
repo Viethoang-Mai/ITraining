@@ -120,10 +120,3 @@ var result = products.reduce(function (prev, current) {
     return prev; //Giá trị max tìm được
 }, null);
 console.log(result);
-/*
-Ý tưởng: 
-Tìm được các phần tử là object và có thuộc tính price (Là sản phẩm)
-Đặt lính canh là sản phẩm đầu tiên tìm được
-So sánh giá của lính canh với từng sản phẩm
-=> Nếu giá của lính canh < giá sản phẩm --> Gán lính canh = sản phẩm
-*/
