@@ -46,7 +46,7 @@ var root = document.querySelector("#root");
 /*
 Bài tập
 <div class="content">
-    <h1>F8 - Học lập trình không khó</h1>
+    <h1>Học lập trình không khó</h1>
     <ul class="menu">
         <li>Item 1</li>
         <li>Item 2</li>
@@ -65,9 +65,9 @@ content.append(h1);
 var ul = document.createElement("ul");
 ul.classList.add("menu");
 for (var index = 1; index <= 3; index++) {
-  var li = document.createElement("li");
-  li.innerText = `Item ${index}`;
-  ul.append(li);
+    var li = document.createElement("li");
+    li.innerText = `Item ${index}`;
+    ul.append(li);
 }
 content.append(ul);
 var button = document.createElement("button");
@@ -77,37 +77,37 @@ root.append(content);
 
 //Xử lý sự kiện
 button.addEventListener("click", function () {
-  var li = document.createElement("li");
-  li.innerText = `Item ${ul.children.length + 1}`;
-  ul.append(li);
+    var li = document.createElement("li");
+    li.innerText = `Item ${ul.children.length + 1}`;
+    ul.append(li);
 });
 
 var button = document.createElement("button");
 button.innerText = "Insert Before UL";
 content.append(button);
 button.addEventListener("click", function () {
-  //Tạo node mới
-  var h2 = document.createElement("h2");
-  h2.innerText = "Hello anh em F8";
-  //Chèn node mới vào trước 1 node con khác
-  content.insertBefore(h2, ul);
+    //Tạo node mới
+    var h2 = document.createElement("h2");
+    h2.innerText = "Hello anh em F8";
+    //Chèn node mới vào trước 1 node con khác
+    content.insertBefore(h2, ul);
 
-  var h3 = document.createElement("h3");
-  //Chèn node mới vào sau 1 node con khác
-  h3.innerText = "Học JS không khó";
-  ul.nextElementSibling && content.insertBefore(h3, ul.nextElementSibling);
+    var h3 = document.createElement("h3");
+    //Chèn node mới vào sau 1 node con khác
+    h3.innerText = "Học JS không khó";
+    ul.nextElementSibling && content.insertBefore(h3, ul.nextElementSibling);
 });
 
 var button = document.createElement("button");
 button.innerText = "Change Node";
 content.append(button);
 button.addEventListener("click", function () {
-  //Tạo node mới
-  var p = document.createElement("p");
-  p.innerText = "Học Javascript DOM";
-  content.replaceChild(p, h1);
+    //Tạo node mới
+    var p = document.createElement("p");
+    p.innerText = "Học Javascript DOM";
+    content.replaceChild(p, h1);
 
-  content.append(h1);
+    content.append(h1);
 
-  content.removeChild(ul);
+    content.removeChild(ul);
 });

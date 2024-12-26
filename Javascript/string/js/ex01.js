@@ -102,3 +102,14 @@ var output = phone.slice(0, 4) + "****" + phone.slice(8);
 console.log(output);
 
 document.body.innerHTML = `ABC`;
+var findWordsContaining = function (words, x) {
+    const arr = words.filter((item, index) => {
+        if (item.includes(x)) {
+            return item;
+        }
+    });
+    console.log(arr);
+
+    return arr;
+};
+findWordsContaining(["abc", "bcd", "aaaa", "cbc"], "a");
