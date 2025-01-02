@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18/umd/react.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        ></script>
+    </head>
+    <body>
+        <!-- 
+        1. Tại sao phải dùng React DOM/Native?-> render react element
+        - là cầu nối giữa react vs DOM/Native  
+        -->
+        <div class="root"></div>
+        <script>
+            const postItem = React.createElement(
+                "div",
+                {
+                    className: "post-item",
+                },
+                React.createElement(
+                    "h2",
+                    {
+                        className: "post-title",
+                    },
+                    "Học lập trình không khó"
+                ),
+                React.createElement(
+                    "p",
+                    {
+                        className: "post-content",
+                    },
+                    "ahihi"
+                )
+            );
+            // Get root element
+            const root = document.querySelector(".root");
+            ReactDOM.createRoot(root).render(postItem);
+        </script>
+    </body>
+</html>

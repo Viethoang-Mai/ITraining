@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 
+    1. document.createElement()
+    2. document.body.appendChild()
+
+    -->
+        <div class="root"></div>
+
+        <script>
+            const root = document.querySelector(".root");
+            const h1 = document.createElement("h1");
+            h1.innerText = "Hello";
+            h1.id = "title";
+            // h1.style.color = "red";
+            // h1.style = "color: red;";
+            Object.assign(h1.style, {
+                color: "red",
+                fontSize: "20px",
+            });
+
+            root.appendChild(h1);
+        </script>
+    </body>
+</html>

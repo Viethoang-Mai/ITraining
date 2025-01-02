@@ -103,6 +103,7 @@ console.log(output);
 
 document.body.innerHTML = `ABC`;
 var findWordsContaining = function (words, x) {
+    // const arr = [];
     const arr = words.filter((item, index) => {
         if (item.includes(x)) {
             return item;
