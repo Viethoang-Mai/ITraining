@@ -373,6 +373,93 @@ function Timer() {
 }
 ```
 
+### React.memo()- HOC(Higher-Order Component)
+
+-   Xử lí 1 component re render không hợp lí
+-   dựa vảo toán tử === để xem có prop của component con nào thay đổi không, nếu ko thì ko re-render
+
+```jsx
+import React, { memo } from "react";
+function Counter() {
+    return (
+        <div>
+            <p>memo</p>
+        </div>
+    );
+}
+
+memo(Counter);
+function App() {
+    const [count, setCount] = useState(0);
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+
+            <Counter />
+        </div>
+    );
+}
+```
+
+### useCallback()
+
+-
+-   giúp tránh tạo ra các fuc mới ko cần thiết
+
+```jsx
+import React, { useCallback, useState, memo } from "react";
+function Counter({ handleClick }) {
+    return (
+        <div>
+            <p>memo</p>
+            <button onClick={handleClick}>Increment</button>
+        </div>
+    );
+}
+
+memo(Counter);
+function App() {
+    const [count, setCount] = useState(0);
+    const handleClick = useCallback(() => {
+        setCount(count + 1);
+    }, []);
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <Counter handleClick={handleClick} />
+        </div>
+    );
+}
+```
+
+### useMemo()
+
+-   giúp tránh thực hiện lại 1 logic không cần thiết
+
+```jsx
+import React, { useMemo } from "react";
+function App() {
+    const fibo=(n) => {
+        if (n < 2) {
+            return n;
+        }
+        return fibo(n - 1) + fibo(n - 2);
+    }
+    const res= useMemo(() => fibo(10),[])
+    const [count, setCount] = useState(0);
+    const handleClick = useMemo(() => {
+        setCount(count + 1);
+    }, [])
+    return (
+        <div></div>
+            <p>Count: {count}</p>
+            <button onClick={handleClick}>Increment</button>
+        </div>
+    )
+}
+```
+
 ---
 
 ## 8. Quản Lý State (Redux, Context)
@@ -523,5 +610,28 @@ function Users() {
     );
 }
 ```
+
+## NPM NPX YARN
+
+### NPM:
+
+-   Project scope:
+
+    -   npm install react ==> dependencies
+    -   npm i react ==> dependencies
+    -   npm uninstall react
+
+    -   npm install --save-dev react-dom ==> devDependencies
+    -   npm i -D react-dom ==> devDependencies
+    -   npm uninstall --save-dev react-dom
+
+-   Global scope
+    -   npm install -global create-react-app
+    -   npm i -g create-react-app
+    -   npm uninstall -g create-react-app
+
+### NPX:
+
+-   Khi cài NodeJS -> kèm theo NPM, NPX
 
 ---
