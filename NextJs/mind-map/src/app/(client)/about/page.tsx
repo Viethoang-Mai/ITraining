@@ -3,11 +3,6 @@ export const metadata = {
     description: "Học tập hiệu quả với bản đồ tư duy",
 };
 import Image from "next/image";
-import AboutImage from "../../../assets/images/AboutUs.png";
-import user1 from "../../../assets/images/avtUser1.png";
-import user2 from "../../../assets/images/avtUser2.png";
-import user3 from "../../../assets/images/avtUser3.png";
-import user4 from "../../../assets/images/avtUser4.png";
 
 export default function AboutPage() {
     return (
@@ -29,7 +24,7 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <Image
-                        src={AboutImage}
+                        src={"../../../assets/images/AboutUs.png"}
                         alt="Mind map"
                         width={668}
                         className="w-full xl:w-8/12 lg:w-7/12 h-auto block sm:w-full"
@@ -54,22 +49,22 @@ export default function AboutPage() {
                     </div>
                     <div className="w-full  xl:w-8/12 grid grid-cols-4 md:grid-cols-2 gap-4 shadow-lg rounded-md pb-5 px-5 sm:w-full sm:justify-items-center ">
                         <Image
-                            src={user1}
+                            src={"../../../assets/images/avtUser1.png"}
                             alt="Mind map"
                             className="w-auto h-auto  "
                         />
                         <Image
-                            src={user2}
+                            src={"../../../assets/images/avtUser2.png"}
                             alt="Mind map"
                             className="w-auto h-auto"
                         />
                         <Image
-                            src={user3}
+                            src={"../../../assets/images/avtUser3.png"}
                             alt="Mind map"
                             className="w-auto h-auto"
                         />
                         <Image
-                            src={user4}
+                            src={"../../../assets/images/avtUser4.png"}
                             alt="Mind map"
                             className="w-auto h-auto"
                         />
