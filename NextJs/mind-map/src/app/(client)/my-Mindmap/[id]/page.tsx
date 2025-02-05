@@ -2,11 +2,17 @@ import { getSession } from "@auth0/nextjs-auth0";
 import { findMindMap } from "@/utils/mindMapFetch";
 import { notFound } from "next/navigation";
 import MindMap from "./MindMap";
-export const generateMetadata = async ({ params: { id } }) => {
+interface Props {
+    params: { id: string };
+}
+
+export const generateMetadata = async ({
+    params: { id },
+}: Props): Promise<any> => {
     const post = await getId(id);
     return { title: post?.title, description: post?.description };
 };
-const getId = async (idMap) => {
+const getId = async (idMap: string) => {
     const { mindMap } = await findMindMap(idMap);
 
     return mindMap;

@@ -16,10 +16,22 @@ import { useRouter } from "next/navigation";
 import "@xyflow/react/dist/style.css";
 import TextUpdaterNode from "../CustomNode";
 import { toast } from "react-toastify";
-const initialEdges = [];
+const initialEdges: any = [];
 const nodeTypes = { textUpdater: TextUpdaterNode };
-
-function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
+interface Prop {
+    id: string;
+    mapData: [];
+    dataJson: any;
+    userId: any;
+    checkMode: any;
+}
+function MindMap({
+    id: mindMapId,
+    mapData,
+    dataJson,
+    userId,
+    checkMode,
+}: Prop) {
     const router = useRouter();
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -35,13 +47,13 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
         try {
             const res = await fetch(`${process.env.NEXT_PUBLIC_URL_MINDMAP}`);
             const data = await res.json();
-            const userIndex = data.findIndex((user) => user.id === userId);
+            const userIndex = data.findIndex((user: any) => user.id === userId);
             if (userIndex === -1) {
                 throw new Error("User not found");
             }
 
             const updatedMindMapData = data[userIndex].mindMapData.map(
-                (item) => {
+                (item: any) => {
                     if (item.idMap === mindMapId) {
                         return {
                             ...dataJson,
@@ -90,7 +102,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
 
     const { screenToFlowPosition } = useReactFlow();
     const onConnect = useCallback(
-        (params) => {
+        (params: any) => {
             currentNodeId.current = null;
             setEdges((eds) => addEdge(params, eds));
         },
@@ -106,7 +118,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
             const { clientX, clientY } = event;
 
             const targetNode = nodes.find((node) => {
-                const nodeBounds = document
+                const nodeBounds: any = document
                     .querySelector(`[data-id="${node.id}"]`)
                     .getBoundingClientRect();
 
@@ -119,7 +131,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
             });
 
             if (targetNode) {
-                setEdges((eds) => {
+                setEdges((eds): any => {
                     const check = eds.find((edge) => {
                         return (
                             edge.id ===
@@ -143,7 +155,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
                 return;
             } else {
                 const maxId = getMaxId();
-                const newNode = {
+                const newNode: any = {
                     id: `${maxId + 1}`,
                     position: screenToFlowPosition({
                         x: event.clientX,
@@ -152,8 +164,8 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
                     data: { label: "Node " + (maxId + 1) + "" },
                     type: "textUpdater",
                 };
-                setNodes((nds) => nds.concat(newNode));
-                setEdges((eds) =>
+                setNodes((nds): any => nds.concat(newNode));
+                setEdges((eds): any =>
                     eds.concat({
                         id: `${currentNodeId.current}-${newNode.id}`,
                         source: currentNodeId.current,
@@ -170,7 +182,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
             setNodes(() => mapData.nodes);
             setEdges(() => mapData.edges);
         } else {
-            setNodes(() => [
+            setNodes((): any => [
                 {
                     id: "0",
                     position: { x: 100, y: 50 },
@@ -275,7 +287,7 @@ function MindMap({ id: mindMapId, mapData, dataJson, userId, checkMode }) {
     );
 }
 
-function FlowWithProvider(props) {
+function FlowWithProvider(props: any) {
     return (
         <ReactFlowProvider>
             <MindMap {...props} />
